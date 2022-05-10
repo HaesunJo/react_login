@@ -1,38 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+input {
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+}
+
 .App {
-  text-align: center;
+    height: 100vh;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00A8B3;
+    /* background-image: url('./assets/img01.png');
+    background-position: block; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* landing page */
+
+.ff-landing-page {
+    width: 100vw;
+    display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ff-landing-page h1 {
+    color: #383838;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+/* image in main */
+
+#bg-right {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #00A8B3;
+    z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
+#ff-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* css for login */
+
+.ff-login-page {
+    width: 500px;
+    height: 100%;
+    display: flex;
+    background-color: #fff;
+    z-index: 2;
+}
+
+.ff-loginform .ff-error {
+    padding-bottom: 15px;
+    color: #00A8B3;
+}
+
+.ff-login {
+    margin: auto;
+    padding: 50px;
+    display: inline-block;
+    display: flex;
+    top: 0;
+    width: auto;
+    height: 100vh;
+    background-color: #fff;
+    position: absolute;
+}
+
+
+/* css for form */
+
+form {
+    display: block;
+    position: flex;
+    margin: auto;
+}
+
+form .ff-loginform {
+    position: relative;
+    display: block;
+    background-color: #fff;
+}
+
+form .ff-field {
+    padding-bottom: 15px;
+}
+
+form .ff-field label {
+    font-size: 1rem;
+    color: #383838;
+}
+
+form .ff-field input {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    transition: .3s linear;
+}
+
+form .ff-field input:hover {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(226, 226, 226, 0.4);
+}
+
+form #btnLogin {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #F2C54B;
+    transition: .3s linear;
+    color: #fff;
+    font-size: 1rem;
+}
+
+form #btnLogin:hover {
+    background-color: #00A8B3;
+    color: #fff;
+}
+
+form .ff-loginform h2 {
+    padding-bottom: 40px;
+    font-weight: 300;
+    font-size: 2.5rem;
+    color: #F2C54B;
+}
+
+form .ff-loginform span {
+    padding-bottom: 40px;
+    padding: 5px;
+    justify-content: end;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #383838;
+}
+
+
+/* css for social login mock buttons */
+
+form .ff-social-gorup {
+    width: 400px;
+}
+
+.ff-social-gorup h3 {
+    padding-top: 40px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #383838;
+}
+
+form .ff-socialLogin {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+form .ff-socialLogin .ff-social {
+    margin-top: 10px;
+    width: 49%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid #e2e2e2;
+    box-sizing: border-box;
+    transition: .3s linear;
+    color: #383838;
+    font-size: 1rem;
+}
+
+form .ff-socialLogin .social_azrue:hover {
+    background-color: #005CB3;
+    border-color: #005CB3;
+    color: #fff;
+}
+
+form .ff-socialLogin .social_bamboo:hover {
+    background-color: #20A169;
+    border-color: #20A169;
+    color: #fff;
+}
+
+form .ff-socialLogin .social_adp:hover {
+    background-color: rgb(207, 100, 100);
+    border-color: rgb(207, 100, 100);
+    color: #fff;
+}
+
+form .ff-socialLogin .social_okta:hover {
+    background-color: rgb(73, 158, 211);
+    border-color: rgb(73, 158, 211);
+    color: #fff;
+}
+
+
+/* css for passwords notice */
+
+form #notice-pw {
+    margin-top: 10px;
+    padding: 30px;
+    width: 400px;
+    bottom: 0;
+    background-color: #e2e2e2;
+}
+
+form #notice-pw h3 {
+    font-weight: 400;
+    color: #383838;
+}
+
+form #notice-pw h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #383838;
+}
+
+form #notice-pw #about {
+    color: #00A8B3;
 }

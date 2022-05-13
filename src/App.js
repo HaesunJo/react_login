@@ -13,7 +13,7 @@
 						<img src={img} alt="img" id="img" />
 					</div>
 				</div>
-				<div className="temp-footer">Haillie Jo / 20022</div>
+				<div className="temp-footer">Haillie Jo / 2022</div>
 			</>
 		);
 	}

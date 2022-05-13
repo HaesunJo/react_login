@@ -47,21 +47,21 @@ function Login() {
 						<h1>Hello, {user.username}</h1>
 					</div>
 				) : (
-					<form onSubmit={ loginHandler }>
-						<div className="ff-loginform">
+					<div className="ff-loginform" >
+						<form onSubmit={ loginHandler }>
 							<h2>Login <span>EN</span><span>FR</span></h2>
 								{(err !== "") ? (<div className="ff-error">{ err }</div>) : ""}
 							<div className="ff-field">
-								<label htmlFor="username">Username</label>
+								{/* <label htmlFor="username">Id</label> */}
 								<input type="text" name="username" id="username" placeholder="email@email.com" onChange={ e => setUser({...userdata, username: e.target.value })} value={userdata.username} />
 							</div>
 							<div className="ff-field">
-								<label htmlFor="password">Password</label>
+								{/* <label htmlFor="password">Password</label> */}
 								<input type="password" name="password" id="password" placeholder="password" onChange={ e => setUser({...userdata, password: e.target.value })} value={userdata.password} />
 							</div>
 							<input type="submit" id="btnLogin" value="Login"/>
-						</div>
-								
+							</form>
+
 							<div className="ff-social-gorup">
 								<h3>Or you can also login with</h3>
 								<div className="ff-socialLogin">
@@ -80,19 +80,20 @@ function Login() {
 								</div>
 							</div>
 
-							<div id="notice-pw">
-								<h3><span>Don't like passwords?</span></h3>
-								<h2>
-									<span>We can send you a special link to your email that will log you in instantly and securely!</span>
-									<span id="about"><br />Tell me more</span>
-								</h2>
+							<div className="notice-pw">
+								<span id="notice-title">Don't like your password?</span>
+								
+								<p>We can send you a special link to your email that will log you in instantly and securely! <a href="#"id="click-here">Click here</a></p>								
 							</div>
-					</form>
+						</div>	
 				)}
+				
 			</div>
 		</div>
 
 	)
+
 }
+
 
 export default Login

@@ -14,7 +14,7 @@ input {
 
 .App {
     height: 100vh;
-    width: auto;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,7 +27,9 @@ input {
 /* landing page */
 
 .ff-landing-page {
-    width: 100vw;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     display: flex;
 }
 
@@ -70,42 +72,41 @@ input {
 }
 
 .ff-login {
-    margin: auto;
     padding: 50px;
-    display: inline-block;
+    padding-top: 200px;
+    width: 500px;
+    height: 100%;
     display: flex;
-    top: 0;
-    width: auto;
-    height: 100vh;
-    background-color: #fff;
     position: absolute;
+    background-color: #fff;
 }
 
 
 /* css for form */
 
-form {
+.ff-loginform form {
     display: block;
     position: flex;
     margin: auto;
 }
 
-form .ff-loginform {
+.ff-loginform {
     position: relative;
     display: block;
     background-color: #fff;
 }
 
-form .ff-field {
+.ff-field {
     padding-bottom: 15px;
+    width: 400px;
 }
 
-form .ff-field label {
+.ff-field label {
     font-size: 1rem;
     color: #383838;
 }
 
-form .ff-field input {
+.ff-field input {
     display: block;
     padding: 10px;
     width: 100%;
@@ -113,13 +114,13 @@ form .ff-field input {
     transition: .3s linear;
 }
 
-form .ff-field input:hover {
+.ff-field input:hover {
     padding: 10px;
     border-radius: 5px;
     background-color: rgba(226, 226, 226, 0.4);
 }
 
-form #btnLogin {
+#btnLogin {
     width: 100%;
     height: 40px;
     border-radius: 5px;
@@ -129,22 +130,24 @@ form #btnLogin {
     font-size: 1rem;
 }
 
-form #btnLogin:hover {
+#btnLogin:hover {
     background-color: #00A8B3;
     color: #fff;
 }
 
-form .ff-loginform h2 {
+.ff-loginform h2 {
     padding-bottom: 40px;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 2.5rem;
     color: #F2C54B;
 }
 
-form .ff-loginform span {
-    padding-bottom: 40px;
+.ff-loginform span {
+    margin-top: 20px;
     padding: 5px;
-    justify-content: end;
+    float: right;
+    align-items: center;
+    justify-content: center;
     font-weight: 300;
     font-size: 1rem;
     color: #383838;
@@ -153,8 +156,11 @@ form .ff-loginform span {
 
 /* css for social login mock buttons */
 
-form .ff-social-gorup {
-    width: 400px;
+.ff-social-gorup {
+    width: 100px;
+    display: contents;
+    justify-content: center;
+    align-items: center;
 }
 
 .ff-social-gorup h3 {
@@ -167,73 +173,93 @@ form .ff-social-gorup {
     color: #383838;
 }
 
-form .ff-socialLogin {
+.ff-socialLogin {
     display: flex;
-    justify-content: space-between;
+    justify-content: inherit;
     flex-flow: row wrap;
 }
 
-form .ff-socialLogin .ff-social {
+.ff-socialLogin .ff-social {
     margin-top: 10px;
-    width: 49%;
+    /* width: 49%; */
+    /* width: 20%; */
+    width: 80px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    border: 1px solid #e2e2e2;
+    /* border: 1px solid #e2e2e2; */
     box-sizing: border-box;
     transition: .3s linear;
-    color: #383838;
+    color: #8a8a8a;
     font-size: 1rem;
+    font-weight: 600;
 }
 
-form .ff-socialLogin .social_azrue:hover {
-    background-color: #005CB3;
-    border-color: #005CB3;
-    color: #fff;
+.social_azrue:hover {
+    /* background-color: #005CB3;
+    border-color: #005CB3; */
+    color: #005CB3;
+    /* color: #fff; */
 }
 
-form .ff-socialLogin .social_bamboo:hover {
-    background-color: #20A169;
-    border-color: #20A169;
-    color: #fff;
+.social_bamboo:hover {
+    /* background-color: #20A169;
+    border-color: #20A169; */
+    color: #20A169;
+    /* color: #fff; */
 }
 
-form .ff-socialLogin .social_adp:hover {
-    background-color: rgb(207, 100, 100);
-    border-color: rgb(207, 100, 100);
-    color: #fff;
+.social_adp:hover {
+    /* background-color: rgb(207, 100, 100); */
+    color: rgb(207, 100, 100);
+    /* color: #fff; */
 }
 
-form .ff-socialLogin .social_okta:hover {
-    background-color: rgb(73, 158, 211);
-    border-color: rgb(73, 158, 211);
-    color: #fff;
+.social_okta:hover {
+    /* background-color: rgb(73, 158, 211); */
+    /* border-color: rgb(73, 158, 211); */
+    color: rgb(73, 158, 211);
+    /* color: #fff; */
 }
 
 
 /* css for passwords notice */
 
-form #notice-pw {
+.notice-pw {
     margin-top: 10px;
-    padding: 30px;
-    width: 400px;
-    bottom: 0;
-    background-color: #e2e2e2;
+    padding-top: 20px;
+    border-top: 1px solid #e2e2e2;
+    width: 100%;
 }
 
-form #notice-pw h3 {
-    font-weight: 400;
-    color: #383838;
-}
-
-form #notice-pw h2 {
+.notice-pw #notice-title {
+    float: none;
+    font-weight: 500;
     font-size: 1rem;
-    font-weight: 400;
-    color: #383838;
+    color: #8a8a8a;
 }
 
-form #notice-pw #about {
+.notice-pw p {
+    padding: 5px;
+    font-size: .8rem;
+    font-weight: 300;
+}
+
+.notice-pw #click-here {
+    text-decoration: none;
+    font-size: .8rem;
+    font-weight: 400;
     color: #00A8B3;
+}
+
+.temp-footer {
+    padding-left: 25%;
+    display: block;
+    position: sticky;
+    bottom: 0;
+    position: none;
+    color: #8a8a8a;
+    background-color: #fff;
 }

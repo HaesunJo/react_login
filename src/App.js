@@ -9,9 +9,9 @@
 				<div className="App">
 					<Login />
 					
-					<div id="bg-right">
+					{/* <div id="bg-right">
 						<img src={img} alt="img" id="img" />
-					</div>
+					</div> */}
 				</div>
 				<div className="temp-footer">Haillie Jo / 2022</div>
 			</>
